@@ -54,12 +54,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         $inputIDs.push($(this).attr('id'));
       }
     });
+    console.log("Ma inputIDs = " + $inputIDs);
     $(".typecard").each(function(){
       var id = $(this).attr('id');
-      if(CardIsVisible($inputIDs, id)){
-        $('.typecard').not('[id*="' + id + '"]').css("display","none");
+      if(!CardIsVisible($inputIDs, id)){
+        $(this).css("display","none");
       }else{
-        $('.typecard').not('[id*="' + id + '"]').css("display","inherit");
+        $(this).css("display","flex");
       }
     });
   }
