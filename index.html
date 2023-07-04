@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cognitive Functions</title>
+    <link rel="icon" type="image/x-icon" href="MBTI_logo.ico">
+    <link href="bootstrap.css" rel="stylesheet">
+    <link href="/style.css" rel="stylesheet">
+</head>
+<header class="pb-5">
+    <nav class="autohide navbar fixed-top primary-nav py-lg-2 navbar-expand-lg navbar-light bg-white">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+              <img src="/MBTI_logo_white.png" alt="MBTI_Logo" width="60" height="60">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Fonctions</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>  
+</header>
+<body class="pt-5">
+    <div class="container pt-5">
+        <h1 class="text-light">
+            Identifier son MBTI grâce aux fonctions cognitives
+        </h1>
+        <div class="btn-group btn-group-lg mt-lg-5 mb-lg-5" role="group" aria-label="Basic checkbox toggle button group">
+            <input type="checkbox" onclick="showCard(this.id)" class="btn-check" id="Ne" autocomplete="off">
+            <label class="btn btn-outline-light" for="Ne">Ne</label>
+
+            <input type="checkbox" onclick="showCard(this.id)" class="btn-check" id="Ni" autocomplete="off">
+            <label class="btn btn-outline-light" for="Ni">Ni</label>
+            
+            <input type="checkbox" onclick="showCard(this.id)" class="btn-check" id="Se" autocomplete="off">
+            <label class="btn btn-outline-light" for="Se">Se</label>
+        
+            <input type="checkbox" onclick="showCard(this.id)" class="btn-check" id="Si" autocomplete="off">
+            <label class="btn btn-outline-light" for="Si">Si</label>
+        
+            <input type="checkbox" onclick="showCard(this.id)" class="btn-check" id="Fe" autocomplete="off">
+            <label class="btn btn-outline-light" for="Fe">Fe</label>
+        
+            <input type="checkbox" onclick="showCard(this.id)" class="btn-check" id="Fi" autocomplete="off">
+            <label class="btn btn-outline-light" for="Fi">Fi</label>
+
+            <input type="checkbox" onclick="showCard(this.id)" class="btn-check" id="Te" autocomplete="off">
+            <label class="btn btn-outline-light" for="Te">Te</label>
+        
+            <input type="checkbox" onclick="showCard(this.id)" class="btn-check" id="Ti" autocomplete="off">
+            <label class="btn btn-outline-light" for="Ti">Ti</label>
+        </div>
+        <br>
+        <h4 class="subtitle">Voici les types correspondant aux fonctions cognitives définies :</h4>
+        
+        <div class="row">
+            <p class="phd text-light"></p>
+            <div id="SiFeTiNe" class="col-sm-3 card typecard text-white bg-dark mb-5 pb-4 pt-2" style="max-width: 18rem;">
+                <div class="card-header opacity-75"><a class="text-green">Si</a> - <a class="text-warning">Fe</a> - <a class="text-orange">Ti</a> - <a class="text-danger">Ne</a>
+                </div>
+                <div class="card-body">
+                        <h5 class="card-title">ISFJ</h5>
+                        <p class="card-text text-white-50"> Courte description du type ? Courte description du type ? Courte description du type ? Courte description du type ? Courte description du type ?</p>
+                        <button type="button" class="btn btn-outline-light opacity-50" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Suis-je ISFJ ?</button>
+                </div>
+            </div>
+            <div id="FeSiNeTi" class="col-sm-3 card typecard text-white bg-dark mb-5 pb-4 pt-2" style="max-width: 18rem;">
+                <div class="card-header opacity-75"><a class="text-green">Fe</a> - <a class="text-warning">Si</a> - <a class="text-orange">Ne</a> - <a class="text-danger">Ti</a>
+                </div>
+                <div class="card-body">
+                        <h5 class="card-title">ESFJ</h5>
+                        <p class="card-text text-white-50"> Courte description du type ? Courte description du type ? Courte description du type ? Courte description du type ? Courte description du type ?</p>
+                        <button type="button" class="btn btn-outline-light opacity-50">Suis-je ESFJ ?</button>
+                </div>
+            </div>
+            <div id="NeTiFeSi" class="col-sm-3 card typecard text-white bg-dark mb-5 pb-4 pt-2" style="max-width: 18rem;">
+                <div class="card-header opacity-75"><a class="text-green">Ne</a> - <a class="text-warning">Ti</a> - <a class="text-orange">Fe</a> - <a class="text-danger">Si</a>
+            </div>
+                <div class="card-body">
+                    <h5 class="card-title">ENTP</h5>
+                    <p class="card-text text-white-50"> Courte description du type ? Courte description du type ? Courte description du type ? Courte description du type ? Courte description du type ?</p>
+                    <button type="button" class="btn btn-outline-light opacity-50">Suis-je ENTP ?</button>
+                </div>
+            </div>
+            <div id="TiNeSiFe" class="col-sm-3 card typecard text-white bg-dark mb-5 pb-4 pt-2" style="max-width: 18rem;">
+                <div class="card-header opacity-75"><a class="text-green">Ti</a> - <a class="text-warning">Ne</a> - <a class="text-orange">Si</a> - <a class="text-danger">Fe</a>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">INTP</h5>
+                    <p class="card-text text-white-50"> Courte description du type ? Courte description du type ? Courte description du type ? Courte description du type ? Courte description du type ?</p>
+                    <button type="button" class="btn btn-outline-light opacity-50">Suis-je INTP ?</button>
+                </div>
+            </div>
+            <div id="FiNeSiTe" class="col-sm-3 card typecard text-white bg-dark mb-5 pb-4 pt-2" style="max-width: 18rem;">
+                <div class="card-header opacity-75"><a class="text-green">Fi</a> - <a class="text-warning">Ne</a> - <a class="text-orange">Si</a> - <a class="text-danger">Te</a>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">INFP</h5>
+                    <p class="card-text text-white-50"> Courte description du type ? Courte description du type ? Courte description du type ? Courte description du type ? Courte description du type ?</p>
+                    <button type="button" class="btn btn-outline-light opacity-50">Suis-je INFP ?</button>
+                </div>
+            </div>
+            <div id="NeFiTeSi" class="col-sm-3 card typecard text-white bg-dark mb-5 pb-4 pt-2" style="max-width: 18rem;">
+                <div class="card-header opacity-75"><a class="text-green">Ne</a> - <a class="text-warning">Fi</a> - <a class="text-orange">Te</a> - <a class="text-danger">Si</a>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">ENFP</h5>
+                    <p class="card-text text-white-50"> Courte description du type ? Courte description du type ? Courte description du type ? Courte description du type ? Courte description du type ?</p>
+                    <button type="button" class="btn btn-outline-light opacity-50">Suis-je ENFP ?</button>
+                </div>
+            </div>
+            <div id="TeSiNeFi" class="col-sm-3 card typecard text-white bg-dark mb-5 pb-4 pt-2" style="max-width: 18rem;">
+                <div class="card-header opacity-75"><a class="text-green">Te</a> - <a class="text-warning">Si</a> - <a class="text-orange">Ne</a> - <a class="text-danger">Fi</a>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">ESTJ</h5>
+                    <p class="card-text text-white-50"> Courte description du type ? Courte description du type ? Courte description du type ? Courte description du type ? Courte description du type ?</p>
+                    <button type="button" class="btn btn-outline-light opacity-50">Suis-je ESTJ ?</button>
+                </div>
+            </div>
+            <div id="SiTeFiNe" class="col-sm-3 card typecard text-white bg-dark mb-5 pb-4 pt-2" style="max-width: 18rem;">
+                <div class="card-header opacity-75"><a class="text-green">Si</a> - <a class="text-warning">Te</a> - <a class="text-orange">Fi</a> - <a class="text-danger">Ne</a>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">ISTJ</h5>
+                    <p class="card-text text-white-50"> Courte description du type ? Courte description du type ? Courte description du type ? Courte description du type ? Courte description du type ?</p>
+                    <button type="button" class="btn btn-outline-light opacity-50">Suis-je ISTJ ?</button>
+                </div>
+            </div>
+            <div id="FiSeNiTe" class="col-sm-3 card typecard text-white bg-dark mb-5 pb-4 pt-2" style="max-width: 18rem;">
+                <div class="card-header opacity-75"><a class="text-green">Fi</a> - <a class="text-warning">Se</a> - <a class="text-orange">Ni</a> - <a class="text-danger">Te</a>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">ISFP</h5>
+                    <p class="card-text text-white-50"> Courte description du type ? Courte description du type ? Courte description du type ? Courte description du type ? Courte description du type ?</p>
+                    <button type="button" class="btn btn-outline-light opacity-50">Suis-je ISFP ?</button>
+                </div>
+            </div>
+            <div id="SeFiTeNi" class="col-sm-3 card typecard text-white bg-dark mb-5 pb-4 pt-2" style="max-width: 18rem;">
+                <div class="card-header opacity-75"><a class="text-green">Se</a> - <a class="text-warning">Fi</a> - <a class="text-orange">Te</a> - <a class="text-danger">Ni</a>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">ESFP</h5>
+                    <p class="card-text text-white-50"> Courte description du type ? Courte description du type ? Courte description du type ? Courte description du type ? Courte description du type ?</p>
+                    <button type="button" class="btn btn-outline-light opacity-50">Suis-je ESFP ?</button>
+                </div>
+            </div>
+            <div id="TeNiSeFi" class="col-sm-3 card typecard text-white bg-dark mb-5 pb-4 pt-2" style="max-width: 18rem;">
+                <div class="card-header opacity-75"><a class="text-green">Te</a> - <a class="text-warning">Ni</a> - <a class="text-orange">Se</a> - <a class="text-danger">Fi</a>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">ENTJ</h5>
+                    <p class="card-text text-white-50"> Courte description du type ? Courte description du type ? Courte description du type ? Courte description du type ? Courte description du type ?</p>
+                    <button type="button" class="btn btn-outline-light opacity-50">Suis-je ENTJ ?</button>
+                </div>
+            </div>
+            <div id="NiTeFiSe" class="col-sm-3 card typecard text-white bg-dark mb-5 pb-4 pt-2" style="max-width: 18rem;">
+                <div class="card-header opacity-75"><a class="text-green">Ni</a> - <a class="text-warning">Te</a> - <a class="text-orange">Fi</a> - <a class="text-danger">Se</a>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">INTJ</h5>
+                    <p class="card-text text-white-50"> Courte description du type ? Courte description du type ? Courte description du type ? Courte description du type ? Courte description du type ?</p>
+                    <button type="button" class="btn btn-outline-light opacity-50">Suis-je INTJ ?</button>
+                </div>
+            </div>
+            <div id="NiFeTiSe" class="col-sm-3 card typecard text-white bg-dark mb-5 pb-4 pt-2" style="max-width: 18rem;">
+                <div class="card-header opacity-75"><a class="text-green">Ni</a> - <a class="text-warning">Fe</a> - <a class="text-orange">Ti</a> - <a class="text-danger">Se</a>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">INFJ</h5>
+                    <p class="card-text text-white-50"> Courte description du type ? Courte description du type ? Courte description du type ? Courte description du type ? Courte description du type ?</p>
+                    <button type="button" class="btn btn-outline-light opacity-50">Suis-je INFJ ?</button>
+                </div>
+            </div>
+            <div id="FeNiSeTi" class="col-sm-3 card typecard text-white bg-dark mb-5 pb-4 pt-2" style="max-width: 18rem;">
+                <div class="card-header opacity-75"><a class="text-green">Fe</a> - <a class="text-warning">Ni</a> - <a class="text-orange">Se</a> - <a class="text-danger">Ti</a>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">ENFJ</h5>
+                    <p class="card-text text-white-50"> Courte description du type ? Courte description du type ? Courte description du type ? Courte description du type ? Courte description du type ?</p>
+                    <button type="button" class="btn btn-outline-light opacity-50">Suis-je ENFJ ?</button>
+                </div>
+            </div>
+            <div id="SeTiFeNi" class="col-sm-3 card typecard text-white bg-dark mb-5 pb-4 pt-2" style="max-width: 18rem;">
+                <div class="card-header opacity-75"><a class="text-green">Se</a> - <a class="text-warning">Ti</a> - <a class="text-orange">Fe</a> - <a class="text-danger">Ni</a>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">ESTP</h5>
+                    <p class="card-text text-white-50"> Courte description du type ? Courte description du type ? Courte description du type ? Courte description du type ? Courte description du type ?</p>
+                    <button type="button" class="btn btn-outline-light opacity-50">Suis-je ESTP ?</button>
+                </div>
+            </div>
+            <div id="TiSeNiFe" class="col-sm-3 card typecard text-white bg-dark mb-5 pb-4 pt-2" style="max-width: 18rem;">
+                <div class="card-header opacity-75"><a class="text-green">Ti</a> - <a class="text-warning">Se</a> - <a class="text-orange">Ni</a> - <a class="text-danger">Fe</a>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">ISTP</h5>
+                    <p class="card-text text-white-50"> Courte description du type ? Courte description du type ? Courte description du type ? Courte description du type ? Courte description du type ?</p>
+                    <button type="button" class="btn btn-outline-light opacity-50">Suis-je ISTP ?</button>
+                </div>
+            </div>
+        
+            <!-- Modal ISFJ -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+                <div class="modal-content text-light bg-dark">
+                    <div class="modal-header border-0">
+                    <h5 class="modal-title fs-3" id="staticBackdropLabel">Portrait de l'ISFJ</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="card-header text-light fs-4 opacity-75"><a style="text-decoration: none;" class="text-green" href="#isfj_si">Si</a> - <a style="text-decoration: none;" class="text-warning" href="#isfj_fe">Fe</a> - <a style="text-decoration: none;" class="text-orange" href="#isfj_ti">Ti</a> - <a style="text-decoration: none;" class="text-danger" href="#isfj_ne">Ne</a>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title fs-5">Caractéristiques principales de l'ISFJ</h4>
+                            <p class="card-text text-white-50">Les ISFJ sont des gardiens assidus, fidèles aux traditions et aux organisations. Ils sont pratiques, compatissants et attentionnés, et sont motivés pour subvenir aux besoins des autres et les protéger des périls de la vie.
+
+                            <p class="card-text text-white-50">Êtres de conventions et ancrés dans la réalité, les ISFJ aiment contribuer aux structures établies de la société. Ce sont des travailleurs réguliers et dévoués qui ont un sens profond des responsabilités envers les autres. Ils se concentrent sur l'accomplissement de leurs tâches, en particulier lorsqu'ils s'occupent des besoins d'autres personnes. Ils veulent que les autres sachent qu'ils sont fiables et qu'on peut leur faire confiance pour faire ce qu'on attend d'ils. Ils sont consciencieuses et méthodiques, et persistent jusqu'à ce que le travail soit fait.</p>
+                            <hr>
+                            <h4 class="card-title fs-5">Comment l'ISFJ utilise ses fonctions cognitives</h4>
+                            <p class="card-text text-white-50">Le type ISFJ s'appuie sur quatre fonctions cognitives clés pour assimiler des informations et prendre des décisions. La fonction dominante est l'aspect principal de la personnalité, tandis que la fonction auxiliaire joue un rôle secondaire et de soutien.
+                            </p>
+                            <br>
+                            <h4 id="isfj_si">Sensation Introvertie</h4>
+                            <h5 class="text-green">Fonction dominante</h5>
+                            <br>
+                            <ul class="list-group">
+                                <li class="list-group-item no-bg-color text-white-50 border-light">Cette fonction amène chez les types pour lesquels elle est dominante à se concentrer sur les détails et les faits.</li>
+                                <li class="list-group-item no-bg-color text-white-50 border-light">Les ISFJ préfèrent les informations concrètes aux théories abstraites.</li>
+                                <li class="list-group-item no-bg-color text-white-50 border-light">Ils sont très à l'écoute de l'environnement immédiat et fermement ancrés dans la réalité.</li>
+                                <li class="list-group-item no-bg-color text-white-50 border-light">En raison de cette tendance à se concentrer sur ce qui leur est familier et à le protéger, les ISFJ sont souvent considérés comme très traditionnels.</li>
+                                <li class="list-group-item no-bg-color text-white-50 border-light">Lorsqu'elles prennent des décisions, les personnes ISFJ comparent leur mémoire vive des expériences passées afin de prédire le résultat des choix et des événements futurs.</li>
+                            </ul>
+                            <br>
+                            <h4 id="isfj_fe">Sentiment Extraverti</h4>
+                            <h5 class="text-warning">Fonction auxiliaire</h5>
+                            <br>
+                            <ul class="list-group">
+                                <li class="list-group-item no-bg-color text-white-50 border-light">Les ISFJ accordent une grande importance aux considérations personnelles.</li>
+                                <li class="list-group-item no-bg-color text-white-50 border-light">Les personnes qui ont en dominante ou en auxiliaire le Sentiment Extraverti s'attachent à développer l'harmonie et les liens sociaux.</li>
+                                <li class="list-group-item no-bg-color text-white-50 border-light">Pour ce faire, elles adoptent des comportements considérés comme socialement appropriés ou bénéfiques, tels que la politesse, la gentillesse, la considération et l'aide.</li>
+                                <li class="list-group-item no-bg-color text-white-50 border-light">Les ISFJ essaient de satisfaire les désirs et les besoins des autres, allant parfois jusqu'à sacrifier leurs propres désirs afin de s'assurer que les autres sont heureux.</li>
+                            </ul>
+                            <br>
+                            <h4 id="isfj_ti">Pensée Introvertie</h4>
+                            <h5 class="text-orange">Fonction tertiaire</h5>
+                            <br>
+                            <ul class="list-group">
+                                <li class="list-group-item no-bg-color text-white-50 border-light">Les ISFJ sont des planificateurs et ont tendance à être très bien organisés.</li>
+                                <li class="list-group-item no-bg-color text-white-50 border-light">Ils utilisent la logique pour comprendre comment le monde fonctionne.</li>
+                                <li class="list-group-item no-bg-color text-white-50 border-light">En absorbant de nouvelles informations et expériences, les ISFJ recherchent des connexions et des points communs afin de trouver des modèles.</li>
+                                <li class="list-group-item no-bg-color text-white-50 border-light">Plutôt que d'essayer de comprendre une petite partie de quelque chose, ils veulent voir comment les choses s'assemblent et comment cela fonctionne dans son ensemble.</li>
+                            </ul>
+                            <br>
+                            <h4 id="isfj_ne">Intuition Extravertie</h4>
+                            <h5 class="text-danger">Fonction inférieure</h5>
+                            <br>
+                            <ul class="list-group">
+                                <li class="list-group-item no-bg-color text-white-50 border-light">Alors que les ISFJ ont tendance à se concentrer sur le présent et les faits concrets, cette fonction largement inconsciente peut contribuer à équilibrer la personnalité ISFJ en aidant l'individu à se concentrer sur les possibilités.</li>
+                                <li class="list-group-item no-bg-color text-white-50 border-light">Le fait d'assimiler les faits et d'explorer ensuite les "hypothèses" peut conduire à une nouvelle compréhension des problèmes.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-dark"data-bs-dismiss="modal">Compris</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+        
+        </div>
+        <!-- Les 8 fonctions cognitives -->
+        <div>
+            <h3 class="card-title text-white subtitle font-weight-bold">Fonctions cognitives</h3>
+                <div class="row">
+                    <div class="col-sm-6 card text-white bg-pale-blue mb-5 pb-4 pt-2" style="max-width: 38rem;">
+                        <div class="card-header fs-4">Ne > Intuition Extravertie</div>
+                        <div class="card-body">
+                            <p class="card-text opacity-50"> L’intuition extravertie n’est jamais rassasiée d’informations. Elle capte tout ce qui l’entoure afin d’explorer de nouvelles possibilités qui peuvent s’offrir à elle. Ne est inlassablement orientée vers le futur et le monde des idées. Elle prend l’info pour en faire quelque chose de neuf depuis son monde intérieur et a sans cesse besoin de renouveau. </p>
+                            <ul class="list-group">
+                                <li class="list-group-item opacity-50 bg-pale-blue">Connecte des idées pour imaginer de nouvelles possibilités.</li>
+                                <li class="list-group-item opacity-50 bg-pale-blue">Accumule toujours plus d’informations pour répondre à un besoin de stimulation.</li>
+                                <li class="list-group-item opacity-50 bg-pale-blue">Anticipe avec enthousiasme les multiples options à venir.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 card text-white bg-pale-blue mb-5 pb-4 pt-2" style="max-width: 38rem;">
+                        <div class="card-header fs-4">Ni > Intuition Introvertie</div>
+                        <div class="card-body">
+                            <p class="card-text opacity-50"> Sans doute la fonction la plus complexe à comprendre, car il s’agit en fait de la plus abstraite. Les personnes qui ont Ni en fonction dominante savent capter les informations intangibles pour entrevoir des possibilités futures, comme des flashs, des prémonitions, des intuitions symboliques souvent inexplicables avec de simples mots.</p>
+                            <ul class="list-group">
+                                <li class="list-group-item opacity-50 bg-pale-blue">Rassemble des informations dans le but d’identifier les schémas abstraits récurrents.</li>
+                                <li class="list-group-item opacity-50 bg-pale-blue">Anticipe pour éviter le danger et répondre à un besoin de sécurité.</li>
+                                <li class="list-group-item opacity-50 bg-pale-blue">Creuse un même sujet jusqu’à atteindre des profondeurs abyssales, pour en trouver l’essence absolue.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 card text-white bg-pale-pink mb-5 pb-4 pt-2" style="max-width: 38rem;">
+                        <div class="card-header fs-4">Se > Sensation Extravertie</div>
+                        <div class="card-body">
+                            <p class="card-text opacity-50"> Les personnes qui ont la Se comme fonction dominante s’intéressent aux objets et aux sensations tangibles à l’instant T. Elles se fient surtout à leurs cinq sens et recherchent des expériences sensitives nouvelles et concrètes. C’est la fonction la plus ancrée dans le monde réel.</p>
+                            <ul class="list-group">
+                                <li class="list-group-item opacity-50 bg-pale-pink">Veut vivre des expériences concrètes qui sollicitent les sens, pour répondre à un besoin de stimulation.</li>
+                                <li class="list-group-item opacity-50 bg-pale-pink">Est extrêmement ancrée dans l’instant présent.</li>
+                                <li class="list-group-item opacity-50 bg-pale-pink">Est continuellement dans l’action (Dormir ?! Pour quoi faire ?)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 card text-white bg-pale-pink mb-5 pb-4 pt-2" style="max-width: 38rem;">
+                        <div class="card-header fs-4">Si > Sensation Introvertie</div>
+                        <div class="card-body">
+                            <p class="card-text opacity-50"> Cette fonction ne s’attache pas aux sensations directes comme sa cousine extravertie mais plutôt à ce que ces sensations provoquent en elle, les émotions qui peuvent en découler. Elle se tournera donc le plus souvent vers le passé pour effectuer ses actions présentes et trouver un écho à partir d’expériences vécues.</p>
+                            <ul class="list-group">
+                                <li class="list-group-item opacity-50 bg-pale-pink">Cherche la stabilité et la fiabilité dans les habitudes et ce qui est familier pour répondre à un besoin de sécurité.</li>
+                                <li class="list-group-item opacity-50 bg-pale-pink">Accorde sa confiance à ce qui a déjà fait ses preuves par le passé.</li>
+                                <li class="list-group-item opacity-50 bg-pale-pink">Est rassurée par les règles, les structures, et par les autorités légitimes.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 card text-white bg-pale-green mb-5 pb-4 pt-2" style="max-width: 38rem;">
+                        <div class="card-header fs-4">Fe > Sentiment Extraverti</div>
+                        <div class="card-body">
+                            <p class="card-text opacity-50"> Avec Fe pour fonction dominante, les relations se situent au premier plan. L’harmonie sociale est essentielle pour l’épanouissement personnel, les amitiés, appels et visites sont nombreux, les bons sentiments également. La personne privilégie les interactions et fait en sorte d’être aimée par le plus grand nombre (quitte parfois à ne pas écouter son vrai self).</p>
+                            <ul class="list-group">
+                                <li class="list-group-item opacity-50 bg-pale-green">Agit avec un focus sur le résultat, pour répondre à un besoin de comprendre et aider le monde avec une approche émotionnelle.</li>
+                                <li class="list-group-item opacity-50 bg-pale-green">Connecte les êtres humains entre eux, et cherche à atteindre et maintenir l’harmonie entre les gens.</li>
+                                <li class="list-group-item opacity-50 bg-pale-green">Dévoue sa vie aux besoins des autres.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 card text-white bg-pale-green mb-5 pb-4 pt-2" style="max-width: 38rem;">
+                        <div class="card-header fs-4">Fi > Sentiment Introverti</div>
+                        <div class="card-body">
+                            <p class="card-text opacity-50"> Cette fonction s’attache aux émotions, aux images, aux révolutions intérieures. Fi renvoie aux valeurs personnelles bien ancrées. Les actions doivent comporter un sens, rien n’est dû au hasard, et ce sens vient de nos convictions intérieures. Une personne qui a Fi pour fonction dominante a besoin d’agir en accord avec ses valeurs les plus profondes.</p>
+                            <ul class="list-group">
+                                <li class="list-group-item opacity-50 bg-pale-green">Cherche l’authenticité de l’être et des ses émotions, pour répondre à un besoin de construction d’identité.</li>
+                                <li class="list-group-item opacity-50 bg-pale-green">Regarde et évalue le monde en se référant à un cadre fait de principes moraux.</li>
+                                <li class="list-group-item opacity-50 bg-pale-green">Traque les injustices, c’est-à-dire tout ce qui sort de son cadre et qui contrarie ses valeurs personnelles (et donc, remet en cause son identité).</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 card text-white bg-pale-yellow mb-5 pb-4 pt-2" style="max-width: 38rem;">
+                        <div class="card-header fs-4">Te > Pensée Extravertie</div>
+                        <div class="card-body">
+                            <p class="card-text opacity-50"> C’est la fonction de la logique et de la méthode par excellence ! Avec Te, on observe et on fabrique notre plan en fonction des résultats concrets qui découlent de notre observation. Avec Te, on ne se précipite pas en sautant des étapes, il y a forcément une solution au problème. Les personnes qui utilisent Te en dominante sont rigoureuses et déterminées à agir dans les temps, quand il faut pour être utile, pertinent, efficace. </p>
+                            <ul class="list-group">
+                                <li class="list-group-item opacity-50 bg-pale-yellow">Agit avec un focus sur le résultat, pour répondre à un besoin de comprendre et aider le monde avec une approche pragmatique.</li>
+                                <li class="list-group-item opacity-50 bg-pale-yellow">Optimise la gestion des ressources telles que le temps, l’énergie, les êtres humains ou l’argent, et cherche à atteindre l’efficacité ultime.</li>
+                                <li class="list-group-item opacity-50 bg-pale-yellow">Dévoue sa vie au dieu de la productivité.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 card text-white bg-pale-yellow mb-5 pb-4 pt-2" style="max-width: 38rem;">
+                        <div class="card-header fs-4">Ti > Pensée Introvertie</div>
+                        <div class="card-body">
+                            <p class="card-text opacity-50"> Là où Te s’approprie un savoir pour l’appliquer utilement dans le monde réel, Ti accumule ce même savoir pour le ranger dans sa « bibliothèque intérieure« . Une pleine utilisation de Ti rend possible la constitution d’un monde intérieur fait d’idées logiques, cohérentes et parfois brillantes si conceptualisées comme il faut (avec l’aide d’une personne qui utilise bien Te, peut-être ?)</p>
+                            <ul class="list-group">
+                                <li class="list-group-item opacity-50 bg-pale-yellow">Cherche LA vérité et veut maîtriser le savoir pour répondre à un besoin de construction d’identité.</li>
+                                <li class="list-group-item opacity-50 bg-pale-yellow">Regarde et évalue le monde en se référant à un cadre fait de principes théoriques et rationnels.</li>
+                                <li class="list-group-item opacity-50 bg-pale-yellow">Traque les erreurs ou les failles, c’est-à-dire tout ce qui sort de son cadre et qui contrarie sa logique personnelle (et donc, remet en cause son identité).</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <!-- Comprendre les fonctions cognitives -->
+        <div>
+            <h3 class="card-title text-white subtitle font-weight-bold">Comment fonctionnent les fonctions cognitives</h3>
+                <div class="row">
+                    <div class="col-sm-6 card text-white bg-pale-green mb-5 pb-4 pt-2" style="max-width: 38rem;">
+                        <div class="card-header fs-4">Fonction dominante</div>
+                        <div class="card-body">
+                            <p class="card-text opacity-50"> C’est votre fonctionnement naturel par défaut. Vous êtes à la maison avec cette fonction, dans votre zone de confort. Vous l’utilisez souvent sans même le réaliser, et ce, depuis que vous êtes enfant.
+                                Si vous décidez de la développer activement, vous pouvez atteindre de hautes compétences dans son utilisation.</p>
+                            <p class="card-text opacity-50">Par exemple, si vous êtes INFP, votre fonction dominante est la Fi (Introverted Feeling ou Sentiment Introverti).</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 card text-white bg-pale-yellow mb-5 pb-4 pt-2" style="max-width: 38rem;">
+                        <div class="card-header fs-4">Fonction auxiliaire</div>
+                        <div class="card-body">
+                            <p class="card-text opacity-50"> Vous êtes très à l’aise avec cette fonction. Cependant, elle vous coûte un peu plus d’énergie que la fonction dominante. Notamment parce que l’orientation de l’énergie de cette fonction est contraire à l’orientation de l’énergie de votre type de personnalité.
+                                Par exemple, si vous êtes introverti/e, l’énergie de votre fonction auxiliaire est extravertie (et vice versa).
+                                Vous prenez conscience de cette fonction pendant l’adolescence.</p>
+                                <p class="card-text opacity-50">Par exemple, si vous êtes INTP, votre fonction auxiliaire est la Ne (Extraverted Intuition ou Intuition Extravertie).</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 card text-white bg-pale-orange mb-5 pb-4 pt-2" style="max-width: 38rem;">
+                        <div class="card-header fs-4">Fonction tertiaire</div>
+                        <div class="card-body">
+                            <p class="card-text opacity-50"> Vous connaissez le personnage de BD Gaston Lagaffe ?
+                                C’est votre fonction tertiaire.
+                                Un jour elle est purement géniale, le lendemain elle vous colle la honte de votre vie. C’est une fonction avec laquelle vous pouvez parfois vous sentir en confiance, alors que vous êtes en train de commettre une belle bourde que tout le monde va remarquer. Et vous serez vexé/e. Parce que vous êtes très susceptible, avec votre fonction tertiaire.
+                                Vous commencez à gagner un peu plus d’aisance avec cette fonction au début de votre vie d’adulte. </p>
+                                <p class="card-text opacity-50">Par exemple, si vous êtes ESTP, votre fonction tertiaire est la Fe (Extraverted Feeling ou Sentiment Extraverti).</p>
+                        
+                        </div>
+                    </div>
+                    <div class="col-sm-6 card text-white bg-pale-red mb-5 pb-4 pt-2" style="max-width: 38rem;">
+                        <div class="card-header fs-4">Fonction inférieure</div>
+                        <div class="card-body">
+                            <p class="card-text opacity-50"> Avec cette fonction, vous vous sentez carrément à côté de la plaque.  Et vous avez raison. Même quand vous essayez de faire de votre mieux, vous avez l’impression d’avoir les compétences d’un enfant de 3 ans avec cette fonction. Généralement, vous avez de l’admiration pour les types de personnalité qui ont votre fonction inférieure en tant que fonction dominante. Vous enviez secrètement leur aisance. Avec cette fonction, vous êtes en mode « sauve-qui-peut ». Vous essayez de vous débrouiller comme vous pouvez. Et parfois, ça peut tourner au comique involontaire. En tout cas si vous êtes capable de pratiquer l’autodérision 🙂
+                                Vous gagnez en aisance avec cette fonction au cours de votre vie d’adulte.</p>
+                                <p class="card-text opacity-50">Par exemple, si vous êtes ESFJ, votre fonction inférieure est la Ti (Introverted Thinking ou Pensée Introvertie)..</p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="bootstrap.js"></script>
+    <script src="customscript.js"></script>
+</body>
+</html>

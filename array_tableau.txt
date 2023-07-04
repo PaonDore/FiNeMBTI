@@ -1,0 +1,23 @@
+Sélection des 8 fonctions
+
+Donc au debut tu as un tableau de 16 valeurs, de 0 à 15. On va l'appeler tab_affiche
+Tu itere sur les cases. Si une case est vraie, il faut filtrer tab_affiche pour qu'il ne contienne que ce qu'il y a dans la table cases[iCaseActuel]
+A la fin, tu te retrouveras avec tab_affiche qui ne contient que les numéros à afficher
+Il te reste plus qu'à mettre toutes les cartes en non visible puis de iterer sur tab_affiche pour afficher les cartes correspondantes
+
+1. Par défaut, les 16 types sont affichés
+2. Lorsqu'on sélectionne une fonction, par exemple la Si, les 8 types contenant de la Si sont affichés
+3. Lorsqu'on sélectionne une deuxième fonction, par exemple la Fe, les 4 types associés à la Si et la Fe (ensemble) sont affichés.
+4. Si on en déselectionne une, les 8 types correspondant à la fonction restante sont les seuls à être affichés
+5. Si on les déselectionne toutes, tous les types sont affichés.
+
+Array MBTI > "Name : ISFJ, Functions : Si, Fe, Ti, Ne" SiFeTiNe
+
+let types= ["SiFeTiNe","FeSiNeTi","NeTiFeSi","TiNeSiFe","FiNeSiTe","NeFiTeSi","TeSiNeFi","SiTeFiNe","FiSeNiTe","SeFiTeNi","TeNiSeFi","NiTeFiSe","NiFeTiSe","FeNiSeTi","SeTiFeNi","TiSeNiFe"];
+let results= types.filter(x => x.includes("Si"));
+console.log(results); //["List"]
+
+à noter que pour dire "ET" dans une fonction en JS on utilise ||
+
+dans l'opération : on vérifie si l'input de la fonction sélectionnée est coché.
+Si c'est le cas, les Cards contenant en string les lettres définies s'affichent. Sinon, elles disparaissent.

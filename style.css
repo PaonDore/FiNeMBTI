@@ -1,0 +1,91 @@
+* {
+    font-family: Poppins;
+    font-weight: 600;
+  }
+  
+  #root {
+      padding-top: 2em;
+      color: #fff !important;
+  }
+  
+  #date, #root{
+      padding-bottom: 2em;
+      color: #e5383b;
+  }
+  
+  .card {
+      margin-left: 1em;
+      margin-right: 1em;
+  }
+  
+  .card-text {
+      padding-top: 1em;
+      opacity: 80%;
+      color: #fff;
+      font-weight: 400;
+  }
+  
+  .card-header {
+      color: #000;
+      opacity: 30%;
+  }
+  
+  .card-title {
+      font-weight: 700;
+  }
+  
+  .subtitle {
+      padding-top: 1em;
+      padding-bottom: 2em;
+      color: #d3d3d3;
+      font-weight: 300;
+  }
+  
+  body {
+      background-color: #161a1d !important;
+  }
+  
+  .gold {
+      color: #b69121;
+  }
+  
+  #firstGold {
+      font-weight: 400;
+      font-size: 22px;
+  }
+  
+  #lastGold {
+      padding-bottom: 2em;
+  }
+  
+  #note {
+      font-size: 22px;
+  }
+  
+  p {
+      color: #161a1d !important;
+  }
+
+  .no-bg-color {
+      background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+  }
+
+  a {
+      text-decoration: none;
+  }
+
+  .scrolled-down{
+    transform:translateY(-100%); transition: all 0.3s ease-in-out;
+  }
+  .scrolled-up{
+    transform:translateY(0); transition: all 0.3s ease-in-out;
+  }
+/*
+  .navbar-fixed-top.scrolled {
+    background-color: transparent !important;
+    transition: background-color 200ms linear;
+  }*/
+
+  .visible {
+    display: none !important;
+}
